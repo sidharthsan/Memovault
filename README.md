@@ -30,9 +30,8 @@
 git clone https://github.com/<your-username>/Memovault.git
 Navigate into the project directory:
 
-bash
-Copy code
-cd Memovault
+
+Memovault
 Open index.html in your browser, or use Live Server in VSCode.
 
 Usage
@@ -53,7 +52,3 @@ Filter notes using the Category Dropdown.
 License
 This project is free to use for personal learning and practice.
 
-yaml
-Copy code
-
----
