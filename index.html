@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memovault</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1>Memovault</h1>
+            <p>Store your thoughts and ideas !</p>
+        </header>
+
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search notes...">
+            <select name="filter-select" id="filterSelect">
+                <option value="All notes"><i class="fas fa-briefcase"></i> All notes</option>
+                <option value="work"><i class="fas fa-briefcase"></i> Work</option>
+                <option value="personal"><i class="fas fa-user"></i> Personal</option>
+                <option value="ideas"><i class="fas fa-lightbulb"></i> Ideas</option>
+                <option value="reminders"><i class="fas fa-bell"></i> Reminders</option>
+            </select>
+            <button id="addNoteBtn"><i class="fas fa-plus"></i>Add Note</button>
+        </div>
+
+        <div id="emptyState" class="empty-state">
+            <i class="fas fa-notes-medical"></i>
+            <h3>No Notes Yet !</h3>
+            <p>Add your notes by clicking add button</p>
+        </div>
+
+        <div id="notesContainer" class="notes-grid">
+        </div>
+    </div>
+
+
+    <div class="modal-overlay" id="addNoteModal">
+        <div class="modal">
+            <div class="modal-title">
+                <h3>New Note</h3>
+                <button id="closeModalBtn" class="modal-close">&times;</button>
+            </div>
+            <hr>
+            <h5>Title</h5>
+            <input type="text" id="modalNoteTitle">
+            <h5>Content</h5>
+            <textarea id="modalNoteContent"></textarea>
+            <h5>Tags</h5>
+            <div class="tags-container">
+                <button class="tag-ideas" data-tag="ideas">
+                    <i class="fas fa-lightbulb"></i> Ideas
+                </button>
+                <button class="tag-work" data-tag="work">
+                    <i class="fas fa-briefcase"></i> Work
+                </button>
+                <button class="tag-personal" data-tag="personal">
+                    <i class="fas fa-user"></i> Personal
+                </button>
+                <button class="tag-reminders" data-tag="reminders">
+                    <i class="fas fa-bell"></i> Reminder
+                </button>
+            </div>
+            <button class="save-button" id="saveNoteBtn">Save Note</button>
+        </div>
+    </div>
+
+
+    <div class="tash-modal-overlay" id="confirmDeleteModal">
+        <div class="trash-modal">
+            <h3>Are you sure you want to delete this note ?</h3>
+            <div class="trash-buttons">
+                <button id="cancelDeleteBtn" class="cancel-button">Cancel</button>
+                <button id="confirmDeleteBtn" class="confirm-button">Delete</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
