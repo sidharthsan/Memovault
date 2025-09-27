@@ -377,25 +377,6 @@ body {
     gap: 10px
 }
 
-@media (max-width: 800px) {
-    .controls input {
-        width: 68%;
-    }
-
-    .modal {
-        width: 61%;
-    }
-
-    .trash-modal {
-        width: 60%;
-    }
-
-    .notes-grid {
-         gap: 41px;
-    }
-    
-}
-
 @media (max-width: 768px) {
     .controls input {
         width: 64%;
@@ -410,9 +391,6 @@ body {
     }
     
 }
-
-
-
 
 
 @media (max-width: 480px) {
@@ -461,7 +439,7 @@ body {
         outline: 0;
         border: 0;
         border: 1px solid transparent;
-        padding: 8px 9px;
+        padding: 8px 6px;
         font-size: 0.7rem;
         border-radius: 26px;
     }
@@ -471,7 +449,7 @@ body {
     }
 
     .note-card {
-        flex: 0 1 169px;
+        flex: 0 1 181px;
     }
 
     .note-title {
@@ -511,8 +489,15 @@ body {
 
 }
 
+@media (max-width: 390px) {
+    .note-card {
+        flex: 0 1 169px;
+    }
+    
+}
 
-@media (max-width: 360px) {
+
+@media (max-width: 375px) {
 
     .controls button {
         font-size: 9px;
